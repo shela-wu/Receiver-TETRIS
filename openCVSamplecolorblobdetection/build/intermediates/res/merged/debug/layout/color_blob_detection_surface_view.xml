@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/color_blob_detection_activity_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/cornerDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true" />
+
+        <view
+            android:id="@+id/bottomRight"
+            class="org.opencv.samples.colorblobdetect.TargetView"
+            id="@+id/view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/space"
+            android:layout_toRightOf="@+id/space2" />
+
+        <view
+            android:id="@+id/bottomLeft"
+            class="org.opencv.samples.colorblobdetect.TargetView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/space"
+            android:layout_toLeftOf="@+id/space2" />
+
+        <view
+            android:id="@+id/topRight"
+            class="org.opencv.samples.colorblobdetect.TargetView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/space"
+            android:layout_toRightOf="@+id/space2" />
+
+        <view
+            android:id="@+id/topLeft"
+            class="org.opencv.samples.colorblobdetect.TargetView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/space"
+            android:layout_alignLeft="@+id/bottomLeft" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/saveThatData"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Button"
+        android:visibility="visible" />
+
+    <view
+        android:id="@+id/what2"
+        class="org.opencv.samples.colorblobdetect.WhatDoISee"
+        id="@+id/view2"
+        layout_alignParentBottom="true"
+        layout_marginLeft="43dp"
+        layout_toRightOf="@+id/bottomRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/what"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+    <view
+        android:id="@+id/what"
+        class="org.opencv.samples.colorblobdetect.WhatDoISee"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+         android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
